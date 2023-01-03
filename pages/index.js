@@ -39,11 +39,12 @@ export default function Home() {
         text-primary tracking-widest`}>
           OLASUNKANMI
           </motion.p>
+          
         <motion.div 
          animate={{ y:0, opacity:1 }}
          initial={{ y:100, opacity: 0 }}
          transition={{ ease: 'easeOut', duration: .9}}
-        className='flex lg:items-center flex-col lg:flex-row'>
+        className='flex lg:items-center flex-col lg:flex-row lg:-mt-6'>
         <p className={`text-shadow hero-text font-bold lg:text-[160px] text-primary tracking-wider`}>BALOGUN</p>
         <div className='lg:pl-8'>
          <p 

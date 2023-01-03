@@ -4,6 +4,26 @@ import spaceTourism from '../public/assets/images/space-tourism-website.png'
 import restCountries from '../public/assets/images/rest-countries.png'
 import interacty from '../public/assets/images/interacty.png'
 
+
+export function PortfolioCard({ children, className }) {
+    return (
+        <div className={`${className} py-8 md:py-20 border-2 border-x-transparent border-t-secondary 
+        border-b-transparent flex flex-col md:flex-row overflow-hidden`}>
+            {children}
+        </div>
+    )
+}
+
+export function ImageContainer({src}) {
+    return (
+        <div className="w-[100%] md:w-[50%]">
+        <Image src={src}
+         alt={`Image for ${src}`}
+         className="rounded-md"/>
+        </div>
+    )
+}
+
 export default function Portfolio() {
 
     return (
@@ -18,74 +38,47 @@ export default function Portfolio() {
           </p>
           </div>
 
-          <section className="mt-12">
+          <section className="md:mt-24">
 
-           <div className="py-12 border-2 border-x-transparent border-b-transparent 
-           border-t-secondary flex flex-col md:flex-row overflow-hidden">
-            <div className="w-[100%] md:w-[50%]">
-            <Image src={restCountries}
-             height='700'
-
-             alt='Image for cocktail project'
-             className="rounded-md z-10"/>
+           <PortfolioCard>
+            <ImageContainer src={restCountries}/>
+            <div className="md:pl-8">
+                <p>
+                    Description
+                </p>
             </div>
+           </PortfolioCard>
 
+
+           <PortfolioCard>
+            <ImageContainer src={interacty}/>
+            <div className="md:pl-8">
+                <p>
+                    Description
+                </p>
+            </div>
+           </PortfolioCard>
+
+           <PortfolioCard>
+            <ImageContainer src={cocktail}/>
+            <div className="md:pl-8">
+                <p>
+                    Description
+                </p>
+            </div>
+           </PortfolioCard>
+
+
+           <PortfolioCard className='border-b-secondary'>
+            <ImageContainer src={spaceTourism}/>
             <div className="pl-8">
                 <p>
                     Description
                 </p>
             </div>
-           </div>
-
-           <div className="py-12 border-2 border-t-secondary border-x-transparent 
-           border-b-transparent flex flex-col md:flex-row overflow-hidden">
-            <div className="w-[100%] md:w-[50%]">
-            <Image src={interacty}
-             alt='Image for cocktail project'
-             className="rounded-md"/>
-            </div>
-
-            <div className="pl-8">
-                <p>
-                    Description
-                </p>
-            </div>
-           </div>
-
-           <div className="py-12 border-2 border-x-transparent border-t-secondary 
-           border-b-secondary flex flex-col md:flex-row overflow-hidden">
-            <div className="w-[100%] md:w-[50%]">
-            <Image src={cocktail}
-            height='700'
-             alt='Image for cocktail project'
-             className="rounded-md"/>
-            </div>
-
-            <div className="pl-8">
-                <p>
-                    Description
-                </p>
-            </div>
-           </div>
-
-
-           <div className="py-12 border-2 border-x-transparent border-t-transparent border-b-secondary
-            flex flex-col md:flex-row overflow-hidden">
-            <div className="w-[100%] md:w-[50%]">
-            <Image src={spaceTourism}
-            height='700'
-             alt='Image for space project'
-             className="rounded-md"/>
-            </div>
-
-            <div className="pl-8">
-                <p>
-                    Description
-                </p>
-            </div>
-           </div>
+           </PortfolioCard>
           </section>
-          
+
         </section>
     )
 }

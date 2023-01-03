@@ -4,7 +4,7 @@ export default function About() {
 
     return (
         <section className='py-20 md:py-0 md:h-screen md:flex md:items-center md:justify-center'>
-        <div className='z-20 -rotate-[8deg] w-[110%] bg-primary h-60 absolute -top-28 mt-2'/>
+        <div className='z-20 -rotate-[5deg] w-[110%] bg-primary h-96 absolute -top-40 mt-2'/>
         <div className='px-8 relative z-30'>
         <h3 className='text-center font-bold tracking-widest text-secondary font-bold md:text-xl'>
             PROFILE
