@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 // import { montserrat } from './_app'
 import { leagueSpartan } from './_app'
 import About from '../components/About'
+import Portfolio from '../components/Portfolio'
 
 export default function Home() {
 
@@ -19,7 +20,7 @@ export default function Home() {
 
       <div className={`${leagueSpartan.variable} font-spartan overflow-hidden`}>
        <Header/>
-      <div className='pt-32 px-8 md:pt-80 lg:pt-16 h-[584px] bg-light-dark md:h-screen'>
+      <div className='pt-32 px-8 md:pt-80 lg:pt-16 h-[700px] bg-light-dark md:h-screen'>
         <div className='md:leading-tight lg:pt-10'>
         <motion.p
           animate={{ y:0, opacity:1 }}
@@ -54,8 +55,9 @@ export default function Home() {
         </motion.div>
         </div>
       </div>
-      <main className='border bg-primary relative'>
-      <About/>
+      <main className='bg-primary relative'>
+         <About/>
+         <Portfolio/>
       </main>
       </div>
     </>
