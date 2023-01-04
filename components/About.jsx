@@ -1,18 +1,32 @@
 import motion from 'framer-motion';
 
+export function Header( { children } ) {
+
+    return (
+        <h3 className='text-center font-bold tracking-widest text-secondary font-bold md:text-xl'>
+            {children}
+        </h3>
+    )
+}
 export default function About() {
 
     return (
-        <section className='py-20 md:py-0 md:h-screen md:flex md:items-center md:justify-center'>
-        <div className='z-20 -rotate-[5deg] w-[110%] bg-primary h-96 absolute -top-40 mt-2'/>
+        <section className='py-20 md:py-0 lg:h-screen md:flex md:items-center md:justify-center'>
+        <div className='z-20 -rotate-[8deg] w-[110%] bg-primary h-96 absolute -top-36 mt-2'/>
         <div className='px-8 relative z-30'>
-        <h3 className='text-center font-bold tracking-widest text-secondary font-bold md:text-xl'>
-            PROFILE
-        </h3>
+
+        <Header>
+          SUMMARY
+        </Header>
+
         <div className='flex justify-center'>            
         <p className='py-4 text-base md:text-2xl text-secondary text-center lg:w-[700px]'>
-        Frontend Engineer with  demonstrated working experience at building small-scale to medium scale web applications. I am passionate about building sites, reusable components that conform to standards. I advocate for clean code and architecture.
-         I actively seek more knowledge - if I do not know it, I will learn it.
+         As a frontend developer with experience in technologies such as HTML, CSS, JavaScript, React/Next, and Tailwind, 
+         as well as a background as a technical writer, I have a strong foundation in both coding and technical communication.
+         I have put these skills to use during my time working for a startup, where I have helped to create high-quality,
+        user-friendly web experiences and produce clear, concise documentation for software products. 
+        I am committed to continuing to develop my skills 
+        and expertise in these areas, and to making a meaningful contribution to the success of the organizations I work with.
         </p>
         </div>
         </div>

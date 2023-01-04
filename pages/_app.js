@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import { Lato } from '@next/font/google'
 import { Montserrat } from '@next/font/google'
 import { League_Spartan } from '@next/font/google'
+import { Roboto } from '@next/font/google'
 
 export const lato = Lato({
   weight: '300',
