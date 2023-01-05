@@ -1,4 +1,5 @@
-import Link from "next/link"
+import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai'
+import { HiMail } from 'react-icons/hi'
 import { motion } from "framer-motion"
 
 export default function Footer() {
@@ -11,11 +12,34 @@ export default function Footer() {
         transition={{ ease: 'easeOut', duration: .2}}
         className="z-30 bg-black fixed bottom-0 left-0 w-full">
         <footer className="py-2 px-8">
+
             <div>
-            <ul className="flex space-x-4 justify-center text-white">
-            <li className="cursor-pointer">Github</li>
-            <li className="cursor-pointer">LinkedIn</li>
-            <li className="cursor-pointer">Twitter</li>  
+            <ul className="flex space-x-2 justify-center text-white">
+
+            <li className="text-2xl hover:text-primary cursor-pointer">
+                <a href="mailto:olasunkanmiibalogun@gmail.com?subject=Hello Olasunkanmi,...">
+                <HiMail/>
+                </a>
+            </li>  
+
+            <li className="text-2xl hover:text-primary cursor-pointer">
+                <a href='https://www.linkedin.com/in/olasunkanmi-balogun-23b3a4202/' target='_blank' rel='noopener noreferrer'>
+                <AiFillLinkedin/>
+                </a>
+            </li>
+
+            <li className="text-2xl hover:text-primary cursor-pointer">
+            <a href='https://github.com/SiR-PENt' target='_blank' rel='noopener noreferrer'>
+                <AiFillGithub/>
+            </a>
+            </li>
+
+            <li className="text-2xl hover:text-primary cursor-pointer">
+            <a href='https://twitter.com/SiR_PENtt' target='_blank' rel='noopener noreferrer'>
+                <AiOutlineTwitter/>
+            </a>
+            </li> 
+
             </ul>
             <p className="text-primary text-center">
                 &copy; {new Date().getFullYear()} Olasunkanmi Balogun. All Rights Reserved

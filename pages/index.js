@@ -5,6 +5,7 @@ import { leagueSpartan } from './_app'
 import About from '../components/About'
 import Portfolio from '../components/Portfolio'
 import Interests from '../components/Interests'
+import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
         <motion.p
           animate={{ y:0, opacity:1 }}
           initial={{ y:100, opacity: 0 }}
-          transition={{ ease: 'easeOut', duration: .5}}
+          transition={{ type:'spring', ease: 'easeOut', duration: .5, stiffness: 100}}
           exit={{ x:-100 }}
          className={`text-light font-thin italic text-2xl text-shadow`}>the portfolio of</motion.p>
     
@@ -36,7 +37,7 @@ export default function Home() {
           animate={{ y:0, opacity:1 }}
           initial={{ y:100, opacity: 0 }}
           exit={{ x:-100 }}
-          transition={{ ease: 'easeOut', duration: .7}}
+          transition={{ type:'spring', ease: 'linear', duration: .9, delay:.1, stiffness: 100 }}
 
         className={`hero-text w-full font-bold
         text-primary tracking-widest`}>
@@ -46,7 +47,7 @@ export default function Home() {
         <motion.div 
          animate={{ y:0, opacity:1 }}
          initial={{ y:100, opacity: 0 }}
-         transition={{ ease: 'easeOut', duration: .9}}
+         transition={{ type:'spring', ease: 'linear', duration: 1.1, delay:.2, stiffness: 100}}
         className='flex lg:items-center flex-col lg:flex-row lg:-mt-8'>
         <p className={`text-shadow hero-text font-bold lg:text-[160px] text-primary tracking-wider`}>BALOGUN</p>
         <div className='lg:pl-8'>
@@ -63,6 +64,7 @@ export default function Home() {
          <About/>
          <Portfolio/>
          <Interests/>
+         <Contact/>
       </main>
       </div>
     </>
