@@ -4,16 +4,21 @@ import spaceTourism from '../public/assets/images/space-tourism-website.png'
 import restCountries from '../public/assets/images/rest-countries.png'
 import interacty from '../public/assets/images/interacty.png'
 import { Header } from "./About"
-import { motion } from "framer-motion"
+import { motion, useScroll } from 'framer-motion'
 
 export function PortfolioCard({ children, className, href }) {
+    const { scrollY } = useScroll()
 
     return (
-        <a href={href} target='_blank' rel='noopener noreferrer'>
-        <div className={`${className} py-8 md:py-20 border-2 border-x-transparent border-t-secondary 
+        <a
+         href={href} target='_blank' rel='noopener noreferrer'>
+        <motion.div
+              style={{ x: scrollY }}
+              transition={{ duration: .5 }}
+               className={`${className} py-8 md:py-20 border-2 border-x-transparent border-t-secondary 
         border-b-transparent flex flex-col md:flex-row overflow-hidden`}>
             {children}
-        </div>
+        </motion.div>
         </a>
     )
 }
@@ -39,11 +44,11 @@ export default function Portfolio() {
           <div className="flex justify-center">
           <motion.p 
           initial={{ opacity: 0, x: 100}}
-          whileInView={{ opacity:1, x:0 }}  
+          whileInView={{ opacity:1, x: 0 }}  
           transition={{ type:'spring', ease: 'easeOut', duration: .7, stiffness: 100, }}
           className="py-4 text-base md:text-xl text-secondary text-center lg:w-[700px]">
             The following are some of my portfolio explorations. Each project card contains details 
-            of it's features and tech stacks utilized.
+            of it's features and tech stack utilized.
           </motion.p>
           </div>
 

@@ -7,6 +7,7 @@ import Portfolio from '../components/Portfolio'
 import Interests from '../components/Interests'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import Test from '../components/Test'
 
 export default function Home() {
 
@@ -22,8 +23,9 @@ export default function Home() {
       </Head>
 
       <div className={`${leagueSpartan.variable} font-spartan overflow-hidden`}>
-       <Header/>
-       <Footer/>
+       {/* <Header/> */}
+       {/* <Footer/> */}
+     
       <div className='pt-32 px-8 md:pt-80 lg:pt-16 h-[700px] bg-light-dark md:h-screen'>
         <div className='md:leading-tight lg:pt-10'>
         <motion.p
@@ -60,7 +62,8 @@ export default function Home() {
         </motion.div>
         </div>
       </div>
-      <main className='bg-primary relative pb-20'>
+      <main className='bg-primary relative pb-14'>
+       
          <About/>
          <Portfolio/>
          <Interests/>
