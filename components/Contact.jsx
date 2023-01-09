@@ -31,33 +31,33 @@ export default function Contact() {
             <div>
                 <div className="flex justify-center">
                <p className="md:text-2xl transition-color ease-out duration-300
-                 font-bold tracking-wide hover:text-black cursor-pointer my-6">
+                 font-bold tracking-wide hover:opacity-50 transition-opacity ease-out duration-1000 cursor-pointer my-6">
                 Olasunkanmiibalogun@gmail.com
                </p>
                 </div>
             <ul className="flex space-x-2 justify-center text-secondary">
 
-            <li className="text-2xl hover:text-primary cursor-pointer">
+            <li className="text-2xl hover:opacity-50 cursor-pointer transition-opacity ease-out duration-1000">
                 <a href="mailto:olasunkanmiibalogun@gmail.com?subject=Hello Olasunkanmi,...">
                 <HiMail/>
                 </a>
             </li>  
 
-            <li className="text-2xl hover:text-primary cursor-pointer">
+            <li className="text-2xl hover:opacity-50 cursor-pointer transition-opacity ease-out duration-1000">
                 <a href='https://www.linkedin.com/in/olasunkanmi-balogun-23b3a4202/' 
                 target='_blank' rel='noopener noreferrer'>
                 <AiFillLinkedin/>
                 </a>
             </li>
 
-            <li className="text-2xl hover:text-primary cursor-pointer">
+            <li className="text-2xl hover:opacity-50 cursor-pointer transition-opacity ease-out duration-1000">
             <a href='https://github.com/SiR-PENt' 
             target='_blank' rel='noopener noreferrer'>
                 <AiFillGithub/>
             </a>
             </li>
 
-            <li className="text-2xl hover:text-primary cursor-pointer">
+            <li className="text-2xl hover:opacity-50 cursor-pointer transition-opacity ease-out duration-1000">
             <a href='https://twitter.com/SiR_PENtt' 
             target='_blank' rel='noopener noreferrer'>
                 <AiOutlineTwitter/>

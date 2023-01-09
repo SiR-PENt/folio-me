@@ -1,35 +1,62 @@
 import Image from "next/legacy/image"
 import cocktail from '../public/assets/images/Cocktails.png'
-import spaceTourism from '../public/assets/images/space-tourism-website.png'
 import restCountries from '../public/assets/images/rest-countries.png'
 import interacty from '../public/assets/images/interacty.png'
 import { Header } from "./About"
-import { motion, useScroll } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export function PortfolioCard({ children, className, href }) {
-    const { scrollY } = useScroll()
 
     return (
-        <a
+        <motion.a
          href={href} target='_blank' rel='noopener noreferrer'>
-        <motion.div
-              style={{ x: scrollY }}
-              transition={{ duration: .5 }}
-               className={`${className} py-8 md:py-20 border-2 border-x-transparent border-t-secondary 
+        <div
+        className={`${className} py-8 md:py-20 border-2 border-x-transparent border-t-secondary 
         border-b-transparent flex flex-col md:flex-row overflow-hidden`}>
             {children}
-        </motion.div>
-        </a>
+        </div>
+        </motion.a>
     )
 }
 
 export function ImageContainer({src}) {
     return (
-        <div className="w-[100%] md:w-[50%]">
+        <motion.div
+        initial={{
+            x: -100, 
+            opacity: 0
+        }} 
+        whileInView={{
+            x: 0, 
+            opacity: 1 
+        }}
+        transition={{ type:'spring',
+         ease: 'easeOut', duration: .7, stiffness: 100, }}
+        className="w-[100%] md:w-[50%]">
         <Image src={src}
          alt={`Image for ${src}`}
-         className="rounded-md"/>
-        </div>
+         className="rounded-md border"/>
+        </motion.div>
+    )
+}
+
+export function PortfolioDescription({ children }) {
+
+    return (
+     <motion.div
+     className="flex items-center md:w-[50%] md:pl-8"
+     initial={{
+        x: 100, 
+        opacity: 0
+    }} 
+    whileInView={{
+        x: 0, 
+        opacity: 1 
+    }}
+    transition={{ type:'spring', delay:.5, ease: 'easeOut', duration: .7, stiffness: 100, }}
+     >
+        { children }
+     </motion.div>
     )
 }
 
@@ -56,40 +83,70 @@ export default function Portfolio() {
 
            <PortfolioCard href='https://rest-country-apis.vercel.app'>
             <ImageContainer src={restCountries}/>
-            <div className="md:pl-8">
-                <p>
-                    Description
+            <PortfolioDescription>
+                <p className="">
+                In this project, I developed a web app using Next.js that allows users to easily explore a database 
+                of countries displayed on their screens from an API.
+                <br/>
+                <br/>
+                I implemented a search feature that 
+                allows users to search for a specific country using the API.
+                I also incorporated Next.js features such as server-side rendering 
+                and the getStaticPaths feature to reduce page load time.
+                <br/>
+                <br/>
+                The tech stack I used for this project included 
+                <b>
+                {' '}Next.js, JavaScript, Framer Motion, React Bootstrap, and CSS.
+                </b>
+                I utilized these tools to create a smooth and responsive user interface for the web app.
                 </p>
-            </div>
+            </PortfolioDescription>
            </PortfolioCard>
 
 
-           <PortfolioCard href='https://interacty.netlify.app'>
+            <PortfolioCard href='https://cocktaildb-prj.netlify.app'>
+             <ImageContainer src={cocktail}/>
+             <PortfolioDescription>
+                 <p>
+                 In this project, I developed a web app using React.js that allows users to easily 
+                 explore a database of cocktails displayed on their screens from an API. 
+                 To enhance the user experience, I integrated another API that displays cocktails based on a user's search result.
+                 <br/>
+                 <br/>
+                 To enable navigation between pages and allow users to view more details
+                 about a specific cocktail, I utilized the React Router library.
+                 <br/>
+                 <br/>
+                 The tech stack I used for this project included the 
+                 <b>{' '}React.js library, React Router, JavaScript, and CSS.</b>
+                 </p>            
+             </PortfolioDescription>
+            </PortfolioCard>
+
+
+           <PortfolioCard 
+           className='border-b-secondary'
+           href='https://interacty.netlify.app'>
             <ImageContainer src={interacty}/>
-            <div className="md:pl-8">
+            <PortfolioDescription>
                 <p>
-                    Description
+                In this project, I created an interactive CRUD website using React.js and
+                a state management tool that enables users to give reviews to projects. 
+                I implemented features that allow users to comment, 
+                reply to comments, and reply to replies, creating a dynamic and engaging user experience.
+                <br/>
+                <br/> 
+                To ensure that data is persisted even when the page is refreshed, 
+                I incorporated persistent data storage using browser LocalStorage.
+                This allows the website to maintain its state and provide a seamless user experience.
+                <br/>
+                <br/> 
+                The tech stack I used for this project included <b>JavaScript, React.js, browser LocalStorage, 
+                useReducer and useContext for state management, and SASS.</b>
+                I utilized these tools to create a dynamic and responsive website that provides a rich user experience.
                 </p>
-            </div>
-           </PortfolioCard>
-
-           <PortfolioCard href='https://cocktaildb-prj.netlify.app'>
-            <ImageContainer src={cocktail}/>
-            <div className="md:pl-8">
-                <p>
-                    Description
-                </p>
-            </div>
-           </PortfolioCard>
-
-
-           <PortfolioCard className='border-b-secondary' href='https://space-de-tourism.netlify.app'>
-            <ImageContainer src={spaceTourism}/>
-            <div className="pl-8">
-                <p>
-                    Description
-                </p>
-            </div>
+            </PortfolioDescription>          
            </PortfolioCard>
           </section>
 

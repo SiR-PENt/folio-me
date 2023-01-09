@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { useRef } from 'react';
-import Test from './Test';
+
 export function Header( { children } ) {
 
     return (
@@ -18,9 +18,10 @@ export default function Profile() {
     const scrollRef = useRef(null);
 
     return (
-        <section className='py-20 md:py-0 lg:h-screen md:flex md:items-center md:justify-center'>
+        <section 
+        className='py-20 md:py-0 lg:h-screen md:flex md:items-center md:justify-center'>
         <div className='z-20 -rotate-[8deg] w-[110%] bg-primary h-96 absolute -top-36 mt-2'/>
-              <Test/>
+              {/* <Test/> */}
         <motion.div 
          viewport={{ root: scrollRef }}
          className='px-8 relative z-30'>
