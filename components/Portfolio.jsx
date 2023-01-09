@@ -8,14 +8,17 @@ import { motion } from 'framer-motion'
 export function PortfolioCard({ children, className, href }) {
 
     return (
-        <motion.a
+        <a
+        transition={{ type:'spring',
+          delay:.1,
+          ease: 'easeOut', duration: .7, stiffness: 100, }}
          href={href} target='_blank' rel='noopener noreferrer'>
         <div
         className={`${className} py-8 md:py-20 border-2 border-x-transparent border-t-secondary 
         border-b-transparent flex flex-col md:flex-row overflow-hidden`}>
             {children}
         </div>
-        </motion.a>
+        </a>
     )
 }
 
@@ -44,7 +47,7 @@ export function PortfolioDescription({ children }) {
 
     return (
      <motion.div
-     className="flex items-center md:w-[50%] md:pl-8"
+     className="flex items-center md:w-[50%] md:pl-8 pt-8"
      initial={{
         x: 100, 
         opacity: 0
@@ -84,7 +87,7 @@ export default function Portfolio() {
            <PortfolioCard href='https://rest-country-apis.vercel.app'>
             <ImageContainer src={restCountries}/>
             <PortfolioDescription>
-                <p className="">
+                <p>
                 In this project, I developed a web app using Next.js that allows users to easily explore a database 
                 of countries displayed on their screens from an API.
                 <br/>
