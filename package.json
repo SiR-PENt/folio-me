@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "copy-to-clipboard": "^3.3.3",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
     "framer-motion": "^8.0.2",
