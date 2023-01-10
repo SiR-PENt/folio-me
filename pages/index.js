@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name='description' content='Olasunkanmi Balogun is a frontend developer passionate about building websites 
         that conforms to standard'/>
-        <link rel="icon" href="/favicon.ico" />
+      
       </Head>
 
       <div className={`${leagueSpartan.variable} font-spartan overflow-hidden`}>

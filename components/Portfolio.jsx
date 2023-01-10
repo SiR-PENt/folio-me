@@ -47,7 +47,7 @@ export function PortfolioDescription({ children }) {
 
     return (
      <motion.div
-     className="flex items-center md:w-[50%] md:pl-8 pt-8"
+     className="text-secondary flex items-center md:w-[50%] md:pl-8 pt-8 md:pt-0"
      initial={{
         x: 100, 
         opacity: 0
@@ -88,7 +88,7 @@ export default function Portfolio() {
             <ImageContainer src={restCountries}/>
             <PortfolioDescription>
                 <p>
-                In this project, I developed a web app using Next.js that allows users to easily explore a database 
+                I developed a web app using Next.js that allows users to easily explore a database 
                 of countries displayed on their screens from an API.
                 <br/>
                 <br/>
@@ -102,7 +102,7 @@ export default function Portfolio() {
                 <b>
                 {' '}Next.js, JavaScript, Framer Motion, React Bootstrap, and CSS.
                 </b>
-                I utilized these tools to create a smooth and responsive user interface for the web app.
+                {' '}I utilized these tools to create a smooth and responsive user interface for the web app.
                 </p>
             </PortfolioDescription>
            </PortfolioCard>
@@ -134,7 +134,7 @@ export default function Portfolio() {
             <ImageContainer src={interacty}/>
             <PortfolioDescription>
                 <p>
-                In this project, I created an interactive CRUD website using React.js and
+                I created an interactive CRUD website using React.js and
                 a state management tool that enables users to give reviews to projects. 
                 I implemented features that allow users to comment, 
                 reply to comments, and reply to replies, creating a dynamic and engaging user experience.
@@ -147,12 +147,37 @@ export default function Portfolio() {
                 <br/> 
                 The tech stack I used for this project included <b>JavaScript, React.js, browser LocalStorage, 
                 useReducer and useContext for state management, and SASS.</b>
-                I utilized these tools to create a dynamic and responsive website that provides a rich user experience.
+                {' '}I utilized these tools to create a dynamic and responsive website that provides a rich user experience.
                 </p>
             </PortfolioDescription>          
            </PortfolioCard>
           </section>
-
+          <div className="flex justify-center">
+          <motion.p 
+             initial={{
+                y: 100, 
+                opacity: 0
+            }} 
+            whileInView={{
+                y: 0, 
+                opacity: 1 
+            }}
+            transition={{ type:'spring', ease: 'easeOut', duration: .7, stiffness:'100'}}
+            className="text-secondary mt-8 text-lg text-center lg:w-[700px]">
+           In my previous job,
+           I worked on technical projects using JavaScript, including building an e-service for a client using 
+           React.js and consuming APIs, as well as collaborating with team members on an in-house project, <b>
+             <a href="https://v2.linqman.com"
+              target='_blank' rel="noopener noreferrer"
+             > Linqman, </a> 
+            </b>
+           using Git and GitHub. On the <b>
+             <a href="https://v2.linqman.com"
+              target='_blank' rel="noopener noreferrer"> Linqman </a> 
+            </b> project, I utilized my JavaScript skills to build the project with React.js,
+            manage state with Redux, consume APIs, and follow best practices.
+          </motion.p>
+          </div>
         </section>
     )
 }
