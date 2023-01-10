@@ -78,7 +78,7 @@ export default function Portfolio() {
           transition={{ type:'spring', ease: 'easeOut', duration: .7, stiffness: 100, }}
           className="py-4 text-base md:text-xl text-secondary text-center lg:w-[700px]">
             The following are some of my portfolio explorations. Each project card contains details 
-            of it's features and tech stack utilized.
+            of it&apos;s features and tech stack utilized.
           </motion.p>
           </div>
 
@@ -114,7 +114,7 @@ export default function Portfolio() {
                  <p>
                  In this project, I developed a web app using React.js that allows users to easily 
                  explore a database of cocktails displayed on their screens from an API. 
-                 To enhance the user experience, I integrated another API that displays cocktails based on a user's search result.
+                 To enhance the user experience, I integrated another API that displays cocktails based on a user&apos;s search result.
                  <br/>
                  <br/>
                  To enable navigation between pages and allow users to view more details
