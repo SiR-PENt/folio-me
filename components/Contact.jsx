@@ -62,7 +62,7 @@ export default function Contact() {
                 <motion.div 
                   initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                   exit={{ y: 50, opacity: 0 }}
+                  exit={{ y: 50, opacity: 0 }}
                 transition={{ type:'spring', ease: 'easeOut', duration: .5, stiffness:'70'}}
                 className={`absolute left-1/3 mt-2 flex justify-center`}>
                 <p className='font-bold text-center border-2 border-secondary pt-1 rounded-2xl w-fit px-4 '>

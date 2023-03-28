@@ -36,12 +36,11 @@ export default function Profile() {
          whileInView={{ opacity:1, x:0 }}  
          transition={{ type:'spring', ease: 'easeOut', delay:.5, duration: .7, stiffness: 100, }}
         className='py-4 text-base md:text-xl text-secondary text-center lg:w-[700px]'>
-         As a frontend developer with experience in technologies such as HTML, CSS, JavaScript, React/Next, and Tailwind, 
-         as well as a background as a technical writer, I have a strong foundation in both coding and technical communication.
-         I have put these skills to use during my time working for a startup, where I have helped to create high-quality,
-        user-friendly web experiences and produce clear, concise documentation for software products. 
-        I am committed to continuing to develop my skills 
-        and expertise in these areas, and to making a meaningful contribution to the success of the organizations I work with.
+        As a frontend developer with versatilities in technologies ranging from basic HTML to modern technologies 
+        like TypeScript and Nextjs.
+        I also have a background as a technical writer, hence a strong foundation in coding and technical communication. 
+        I am committed to continuing to develop my skills and expertise in these areas, and to make a meaningful 
+        contribution to the success of any organisations I work with.
         </motion.p>
         </div>
         </motion.div>
