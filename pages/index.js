@@ -55,8 +55,8 @@ export default function Home() {
         <div className='lg:pl-8'>
          <p 
           className='text-primary text-shadow lg:w-56 tracking-widest'>
-          <span className='uppercase text-sm text-secondary font-bold'>specialty</span> HTML, CSS, JavaScript, React/Next, 
-          Redux/Redux-toolkit, Tailwind and Bootstrap, Git, Github amongst others...
+          <span className='uppercase text-sm text-secondary font-bold'>specialty</span> HTML, CSS, TypeScript, 
+          JavaScript, Reactjs/Next.js, Redux/Redux-toolkit, Tailwind and Bootstrap, Git, Github amongst others...
          </p>
         </div>
         </motion.div>
