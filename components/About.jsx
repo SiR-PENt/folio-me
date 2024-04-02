@@ -35,8 +35,8 @@ export default function Profile() {
          initial={{ opacity: 0, x: 100,}}
          whileInView={{ opacity:1, x:0 }}  
          transition={{ type:'spring', ease: 'easeOut', delay:.5, duration: .7, stiffness: 100, }}
-        className='py-4 text-base md:text-xl text-secondary text-center lg:w-[700px]'>
-        As a frontend developer with versatilities in technologies ranging from basic HTML to modern technologies 
+        className='py-4 text-lg md:text-xl text-secondary text-center lg:w-[700px]'>
+        I&apos;m a frontend developer with versatilities in technologies ranging from basic HTML to modern technologies 
         like TypeScript and Nextjs.
         I also have a background as a technical writer, hence a strong foundation in coding and technical communication. 
         I am committed to continuing to develop my skills and expertise in these areas, and to make a meaningful 
