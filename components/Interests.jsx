@@ -20,10 +20,10 @@ export default function Interests() {
             interactive user interfaces. I am actively involved in the 
             open source community and have contributed to several projects on GitHub,
              such as 
-             <a href="https://github.com/CommunityPro" 
+             <a href="https://github.com/formbricks/formbricks" 
              target='_blank' rel='noreferrer noopener'
              className="opacity-80 font-bold">
-             {' '}Community Pro.
+             {' '}Formbricks.
              </a>
              <br/>
              <br/>
